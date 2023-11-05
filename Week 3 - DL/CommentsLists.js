@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { Col } from 'reactstrap';
 import Comment from './Comment';
 import { selectCommentsByCamsiteId } from './commentsSlice';
@@ -6,7 +5,7 @@ import CommentForm from './CommentForm';
 import AnimatedComment from './AnimatedComment';
 
 const CommentsList = ({ campsiteId }) => {
-    const comments = useSelector(selectCommentsByCamsiteId(campsiteId));
+    const comments = selectCommentsByCamsiteId(campsiteId);
 
     if (comments && comments.length > 0) {
         return (
